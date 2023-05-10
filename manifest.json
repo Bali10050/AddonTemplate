@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "userStylesheets",
+  "version": "1.0",
+  "description": "Stolen",
+  "author": "You",
+  "homepage_url": "https://github.com/",
+  "applications": {
+    "gecko": {
+      "id": "stolen@template",
+      "strict_min_version": "89.0"
+    }
+  },
+  "icons": {
+    "16": "logo/default16.png",
+    "48": "logo/default48.png",
+    "128": "logo/default128.png"
+  },
+  "permissions": [
+    "idle",
+    "management",
+    "storage",
+    "tabs",
+    "theme"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "experiment_apis": {
+    "stylesheet": {
+      "schema": "stylesheet-api-experiment/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["stylesheet"]],
+        "script": "stylesheet-api-experiment/api.js"
+      }
+    }
+  }
+}
